@@ -9,10 +9,25 @@ function handleKeyboardKeyUpEvent(event){
     const expectedAlphabet = currentAlphabet.toLowerCase();
     // console.log(playerPressed, expectedAlphabet);
 
+
     //checked matched or not
     if(playerPressed === expectedAlphabet){
         // console.log('correct! you\'ve got a point');
-        console.log('you have pressed correctly', expectedAlphabet);
+        //update score 
+        //1. get current score
+        const currentScoreElement = document.getElementById('current-score');
+        const currentScoreText = currentScoreElement.innerText;
+        const currentScore = parseInt(currentScoreText);
+        console.log(currentScore);
+
+        //2.increase score by 1
+        const newScore = currentScore + 1;
+
+        //3.show the updated score
+        currentScoreElement.innerText = newScore;
+
+        //start a new round
+        // console.log('you have pressed correctly', expectedAlphabet);
         removeBgColorById(expectedAlphabet);
         continueGame();
     }
