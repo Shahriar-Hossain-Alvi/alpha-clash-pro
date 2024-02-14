@@ -21,6 +21,20 @@ function removeBgColorById(elementId){
     element.classList.remove('bg-[#FFA500]');
 }
 
+//f-9
+function getTextElementValueById(elementId) {
+    const element = document.getElementById(elementId);
+    const elementValueText = element.innerText;
+    const value = parseInt(elementValueText);
+    return value;
+}
+
+//f-10
+function setTextElementValueById(elementId, value){
+    const element = document.getElementById(elementId);
+    element.innerText = value;
+}
+
 
 // f-4
 function getARandomAlphabet() {
