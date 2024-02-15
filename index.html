@@ -99,14 +99,15 @@
         <!-- playground end -->
 
         <!-- final score start -->
-        <section class="score flex justify-center items-center min-h-screen hidden">
+        <section id="final-score" class="flex justify-center items-center min-h-screen hidden">
             <div
                 class="text-white space-y-10 text-center bg-gradient-to-r from-[#FFFFFF8F] to-[#48179D] p-10 rounded-2xl">
+                <h4 class="text-3xl">Game Over!</h4>
                 <h1 class="text-8xl">
                     <span class="font-extrabold">Score :</span>
-                    <span>14</span>
+                    <span id="last-score">14</span>
                 </h1>
-                <button class="btn text-black bg-white border-0 text-2xl font-semibold">Play again</button>
+                <button onclick="play()" class="btn text-black bg-white border-0 text-2xl font-semibold">Play again</button>
                 <p>Practice will make you Pro</p>
             </div>
         </section>
